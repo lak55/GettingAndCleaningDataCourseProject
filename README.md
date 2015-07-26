@@ -1,23 +1,11 @@
-GETTING AND CLEANING DATA
+The script  run_analysis.R and performs the 5 steps as following.
 
-COURSE PROJECT
-The purpose of this course project is to demonstrate the ability to collect, work with, and clean a data set.
+Step 1. Merges the training and the test sets to create one data set using the rbind() function and concatenate the data tables by rows. Merge columns to get the data frame data for all data using cbind().
 
-A full description is available at the site where the data was obtained: 
+Step 2. Extracts only the measurements on the mean and standard deviation for each measurement. Subset Name of Features by measurements on the mean and standard deviation. Subset the data frame Data by selected names of Features.
 
-http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
+Step 3. Uses descriptive activity names to name the activities in the data set. Then read descriptive activity names from "activity_labels.txt" and facorize Variable activity in the data frame Data using descriptive activity names and check the structures of the data frame Data. 
 
-Here are the data for the project: 
+Step 4. Appropriately labels the data set with descriptive variable names and check the structures of the data frame Data.
 
-https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
-
-This course should create one R script called run_analysis.R that does the following. 
-
-1.Merges the training and the test sets to create one data set.
-2.Extracts only the measurements on the mean and standard deviation for each measurement. 
-3.Uses descriptive activity names to name the activities in the data set
-4.Appropriately labels the data set with descriptive variable names. 
-5.From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-
-
-
+Step 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject. Generate a new dataset with all the average measures for each subject and activity type (30 subjects * 6 activities = 180 rows). The output file is called tidydata.txt
